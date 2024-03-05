@@ -12,6 +12,7 @@ https://files.pineapplemachine.com/public/web/nopeustesti24/
 Possible areas for improvement:
 
 - Interaction via keyboard, not just mouse
+- Better layout for smaller screens
 - Clearer UI indication of a loss due to falling too far behind
 - Disregard vite recommended eslint settings and set up something more reasonable
 - Add type definitions for xorshift dependency

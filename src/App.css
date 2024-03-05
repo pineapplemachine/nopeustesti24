@@ -116,3 +116,36 @@ button:hover {
 #game-button-3:active {
     background-color: #851;
 }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.0em !important;
+    }
+    .game-buttons-container {
+        height: 60px;
+    }
+    .game-button {
+        border-radius: 18px;
+        width: 48px;
+        height: 48px;
+        margin: 8px;
+    }
+    .game-button:hover {
+        height: 52px;
+    }
+    .game-button:active {
+        height: 48px;
+    }
+    .game-button .glow {
+        width: 36px;
+        height: 36px;
+        margin: 4px auto;
+        border-radius: 12px;
+    }
+    .game-button.lose .glow {
+        padding-top: 9px;
+    }
+    .game-button.lose .glow::before {
+        font-size: 14px;
+    }
+}
