@@ -7,7 +7,7 @@ This was largely an exercise in learning the basics of React and StyledComponent
 A demo is hosted online at:
 https://files.pineapplemachine.com/public/web/nopeustesti24/
 
-# Things left undone
+## Things left undone
 
 Possible areas for improvement:
 
@@ -23,7 +23,7 @@ Possible areas for improvement:
 - Automated tests
 - Optimize the logic for determining what button to light up at what time
 
-# Build instructions
+## Build instructions
 
 To run the app locally, clone this repository and run these commands in the root directory:
 
@@ -41,6 +41,6 @@ npx vite build --base="[base url]"
 npx vite build --base="https://files.pineapplemachine.com/public/web/nopeustesti24/"
 ```
 
-# Screenshot
+## Screenshot
 
 ![Screenshot of web app](https://raw.githubusercontent.com/pineapplemachine/nopeustesti24/master/screenshot.png)
