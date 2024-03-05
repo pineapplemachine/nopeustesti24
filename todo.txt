@@ -1,0 +1,29 @@
+Nopeustesti
+https://www.youtube.com/watch?v=mfqy1jFEH2w
+
+Use React+StyledComponents to construct the UI
+https://www.npmjs.com/package/styled-components
+Use Redux to store state
+https://www.npmjs.com/package/redux
+
+Game:
+Player initiates a new game and starts with 0 points.
+Four buttons light up in a random order.
+Player presses buttons in the order they light up (lagging behind is ok) and gets 1 point for every success. Game ends at the first failure.
+The speed of buttons lighting up increases over time
+
+Todo list (essential):
+Basic page layout: 4 buttons, score counter, start new game
+Buttons light up in sequence (use requestAnimationFrame?)
+Mouse interaction, scorekeeping, lose condition
+Put it on a webpage
+Put it on github
+
+Todo list (maybe):
+Keyboard interaction
+Make it pretty
+Sound effects
+Music and/or ambient arcade sounds
+Multiple options for page theme/background
+Submit and track high scores
+Tests
