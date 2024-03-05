@@ -35,9 +35,10 @@ To build the app and produce static files, run:
 
 ```
 npx vite build --base="[base url]"
-```
 
---base="https://files.pineapplemachine.com/public/web/nopeustesti24/"
+# For example:
+npx vite build --base="https://files.pineapplemachine.com/public/web/nopeustesti24/"
+```
 
 # Screenshot
 
