@@ -126,7 +126,6 @@ function getNextSequenceLight(prng: XorShift, previous: number) {
 }
 
 function App() {
-    // console.log("Render!");
     const renderTimeMs = new Date().getTime();
     // True when game is actively being played, false otherwise
     const [gameActive, setGameActive] = useState<boolean>(false);
@@ -187,7 +186,6 @@ function App() {
     }
     // Helper function to start a new game
     function initNewGame() {
-        console.log("initNewGame");
         const newGameTimeMs = new Date().getTime();
         setGameActive(true);
         setPrng(getPrng(newGameTimeMs));
@@ -197,21 +195,16 @@ function App() {
         setPressedLastButton(false);
         setSequence([]);
         setSequenceIndex(0);
-        // toast?
     }
     // Helper function to represent a loss
     function loseGame() {
-        console.log("loseGame");
-        // todo
-        // toast?
         setGameActive(false);
         setPressedLastButton(false);
         setSequence([]);
         setSequenceIndex(0);
     }
-    // Event handler when a button is clicked
+    // Event handler for when a button is clicked
     function onButtonClick(buttonIndex: number) {
-        console.log("onButtonClick", buttonIndex);
         // No game currently active? Start a new one
         if(!gameActive) {
             initNewGame();
