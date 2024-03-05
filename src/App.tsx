@@ -55,6 +55,9 @@ const SequenceLightIndexStepDelta = (
 // Number of presses from start of the game before the fastest time
 const SequenceLightLength = 200;
 
+// Given an index in the sequence of lit buttons, get how long
+// that button should be lit for. Later buttons will be lit for
+// shorter amounts of time.
 function getSequenceLightIndexTime(index: number) {
     const t = ((Math.sin(index / SequenceLightLength * Math.PI) + 1) / 2);
     if(t <= 0) {
@@ -68,6 +71,8 @@ function getSequenceLightIndexTime(index: number) {
     }
 }
 
+// Generate a list of elapsed times at which a button at some point
+// in the sequence of lit buttons should be lit.
 function getSequenceLightIndexTimes(): number[] {
     const times = [];
     let accTime = 0;
@@ -102,7 +107,8 @@ function getSequenceLightIndex(times: number[], elapsedTime: number) {
     return times.length;
 }
 
-function getPrng(seed: number) {
+// Initialize and return a seeded pseudo-random number generator.
+function getPrng(seed: number): XorShift {
     return new XorShift([
         (seed | 0),
         0x12340123,
@@ -111,10 +117,16 @@ function getPrng(seed: number) {
     ]);
 }
 
+// Randomly generate a number in the range [0, 3] representing
+// the first button that should be lit up in a new game.
 function getFirstSequenceLight(prng: XorShift) {
     return (prng.randomint()[0] >>> 0) % 4;
 }
 
+// Randomly generate a number in the range [0, 3] representing
+// a subsequent button that should be lit up in a sequence,
+// which will be any button other than the previous one,
+// as supplied in the second argument.
 function getNextSequenceLight(prng: XorShift, previous: number) {
     const random = (prng.randomint()[0] >>> 0) % 3;
     if(random >= previous) {
